@@ -134,7 +134,7 @@ export default {
         }
 
         this.$axios
-            .$post(`/api/images/${this.contentType}`, formData)
+            .$post(`/images/${this.contentType}`, formData)
             .then(images => {
               const nodes = [];
 
