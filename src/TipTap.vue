@@ -64,6 +64,8 @@ export default {
     }
   },
 
+  emits: ['update:modelValue'],
+
   data() {
     return {
       editor: null,
@@ -92,7 +94,7 @@ export default {
         Typography,
       ],
       onUpdate: ({ editor }) => {
-        this.$emit('input', editor.getHTML());
+        this.$emit('update:modelValue', editor.getHTML());
       },
     })
   },
