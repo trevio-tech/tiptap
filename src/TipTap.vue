@@ -51,7 +51,7 @@ export default {
   },
 
   props: {
-    value: {
+    modelValue: {
       type: String,
       default: '',
     },
@@ -74,7 +74,7 @@ export default {
 
   mounted() {
     this.editor = new Editor({
-      content: this.value,
+      content: this.modelValue,
       extensions: [
         Bold,
         Document,
