@@ -1,4 +1,19 @@
 {
+  "name": "@trevio/tiptap",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/tiptap.umd.cjs",
+  "module": "./dist/tiptap.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tiptap.js",
+      "require": "./dist/tiptap.umd.cjs"
+    }
+  },
   "scripts": {
     "build": "vite build"
   },
