@@ -3,7 +3,7 @@
     <div class="node-toolbar-tools">
       <slot name="prepend"></slot>
       <node-toolbar-item title="Удалить" @click="$emit('delete')">
-        <v-icon name="x" class="node-toolbar-tool"></v-icon>
+        Удалить
       </node-toolbar-item>
     </div>
   </div>
