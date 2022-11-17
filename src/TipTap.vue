@@ -28,20 +28,20 @@
 </template>
 <script>
 import { Editor, EditorContent, BubbleMenu, FloatingMenu, isTextSelection, isNodeSelection } from '@tiptap/vue-3'
-import Document from '@tiptap/extension-document';
-import Placeholder from '@tiptap/extension-placeholder';
-import Paragraph from '@tiptap/extension-paragraph';
-import Text from '@tiptap/extension-text';
-import Heading from '@tiptap/extension-heading';
-import Typography from '@tiptap/extension-typography';
-import Dropcursor from '@tiptap/extension-dropcursor';
+import Embed from './extensions/Embed'
+import Image from './extensions/Image'
+import Bold from '@tiptap/extension-bold'
+import Document from '@tiptap/extension-document'
+import Dropcursor from '@tiptap/extension-dropcursor'
 import Gapcursor from '@tiptap/extension-gapcursor'
-import History from '@tiptap/extension-history';
-import Bold from '@tiptap/extension-bold';
+import Heading from '@tiptap/extension-heading'
+import History from '@tiptap/extension-history'
+import Italic from '@tiptap/extension-italic'
+import Paragraph from '@tiptap/extension-paragraph'
+import Placeholder from '@tiptap/extension-placeholder'
 import Strike from '@tiptap/extension-strike'
-import Italic from '@tiptap/extension-italic';
-import Image from './extensions/Image';
-import Embed from './extensions/Embed';
+import Text from '@tiptap/extension-text'
+import Typography from '@tiptap/extension-typography'
 
 export default {
   components: {
@@ -105,9 +105,9 @@ export default {
       const { empty } = selection
 
       // Почему-то перестало работать.
-      // if (isNodeSelection(state.selection)) {
-      //   return false;
-      // }
+      if (isNodeSelection(state.selection)) {
+        return false;
+      }
 
       if (state.selection.hasOwnProperty('node')) {
         return false;

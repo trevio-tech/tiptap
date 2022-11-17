@@ -1,7 +1,7 @@
+import Component from './Component.vue'
 import { Node, mergeAttributes, markInputRule } from '@tiptap/core'
-import { Plugin, PluginKey } from 'prosemirror-state';
-import { VueNodeViewRenderer } from '@tiptap/vue-3';
-import Component from './Component.vue';
+import { Plugin, PluginKey } from 'prosemirror-state'
+import { VueNodeViewRenderer } from '@tiptap/vue-3'
 
 const youtubeRegExp =
     /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:m\.)?(?:youtu(?:be)?\.com\/(?:v\/|embed\/|watch(?:\/|\?v=))|youtu\.be\/)((?:\w|-){11})(?:\S+)?$/;
