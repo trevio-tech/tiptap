@@ -1,19 +1,18 @@
 <template>
-  <node-view-wrapper draggable="true" class="tiptap-image">
-    <node-toolbar @delete="deleteNode">
+  <NodeViewWrapper draggable="true" class="tiptap-image">
+    <NodeToolbar @delete="deleteNode">
       <template #prepend>
-        <node-toolbar-item
-          icon="check"
-          :class="{'bg-green hover:bg-green': parseInt(editor.contentComponent.$parent.coverId) === parseInt(node.attrs['data-id'])}"
+        <NodeToolbarItem
+          :class="{'bg-green hover:bg-green': parseInt(editor.contentComponent.$parent?.coverId) === parseInt(node.attrs['data-id'])}"
           @click="editor.contentComponent.$emit('cover', node.attrs['data-id'])"
         >
-          <div class="node-toolbar-tool">Обложка</div>
-        </node-toolbar-item>
+          Обложка
+        </NodeToolbarItem>
       </template>
-    </node-toolbar>
+    </NodeToolbar>
 
     <img :src="node.attrs.src" :data-id="node.attrs['data-id']" :data-src="node.attrs['data-src']" alt="" style="display: block">
-  </node-view-wrapper>
+  </NodeViewWrapper>
 </template>
 
 <script setup>

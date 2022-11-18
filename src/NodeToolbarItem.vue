@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :title="title" @click="$emit('click')">
+  <button class="node-toolbar-tool" type="button" :title="title" @click="$emit('click')">
     <slot></slot>
   </button>
 </template>
@@ -13,13 +13,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-.node-toolbar-tool {
-  color: #fcfcfc;
-  min-width: 28px;
-  height: 28px;
-  padding: 4px;
-}
-</style>
